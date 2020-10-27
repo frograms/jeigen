@@ -2,7 +2,7 @@
   <path id="project.class.path">
     <pathelement path="${java.class.path}/"/>
     <pathelement path="thirdparty/junit-4.10.jar"/>
-    <pathelement path="thirdparty/jna-4.1.0.jar"/>
+    <pathelement path="thirdparty/jna-5.5.0.jar"/>
   </path>
 
     <target name="getinfo">
@@ -59,7 +59,7 @@
       <copy tofile="${build.dir}/classes/libjeigen-${build.dir.os}-${jvm.word.size}.so" failonerror="false" quiet="true" file="${cmakeoutdir}/libjeigen.so" overwrite="true" />
       <copy tofile="${build.dir}/classes/libjeigen-${build.dir.os}-${jvm.word.size}.dylib" failonerror="false" quiet="true" file="${cmakeoutdir}/libjeigen.dylib" overwrite="true" />
       <copy todir="${build.dir}" >
-          <fileset file="thirdparty/jna-4.1.0.jar" />
+          <fileset file="thirdparty/jna-5.5.0.jar" />
       </copy>
    </target>
 
@@ -84,7 +84,7 @@
        <junit printsummary="withOutAndErr" fork="on" haltonerror="on" haltonfailure="on" showoutput="withOutAndErr" >
             <classpath>
                 <pathelement location="${build.dir}/Jeigen-${build.dir.os}-${jvm.word.size}.jar" />
-                <pathelement path="${build.dir}/jna-4.1.0.jar"/>
+                <pathelement path="${build.dir}/jna-5.5.0.jar"/>
                 <pathelement path="thirdparty/junit-4.10.jar"/>
             </classpath>
 <!--              <formatter type="xml"/>-->
@@ -155,7 +155,7 @@
           <classpath>
             <pathelement path="build/test-onefat" />
             <pathelement location="build/Jeigen-win-linux-32-64.jar" />
-            <pathelement location="thirdparty/jna-4.1.0.jar" />
+            <pathelement location="thirdparty/jna-5.5.0.jar" />
           </classpath>
       </java>
     </target>
